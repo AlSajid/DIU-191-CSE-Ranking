@@ -6,13 +6,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://diu-cse-191-cgpa-ranking-express.vercel.app/ranking', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ token: "sajid" })
-    })
+    fetch('ranking.json',)
       .then(response => response.json())
       .then(data => setData(data))
   }, [])
@@ -32,8 +26,8 @@ function App() {
           <td>Student ID</td>
           <td>CGPA</td>
         </tr>
-        {data.length === 0 && <tr><td className='text-center font-xxl'>Loading...</td></tr>}
-        {data.map((item, rank) => {
+        {data?.length === 0 && <tr><td className='text-center font-xxl'>Loading...</td></tr>}
+        {data?.map((item, rank) => {
           return (
             <tr className='border text-lg' key={item.studentId}>
               <td className='text-center'>{rank + 1}</td>
