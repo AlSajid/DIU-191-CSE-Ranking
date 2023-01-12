@@ -1,15 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import ranking from './ranking.json';
 
 function App() {
-  const [data, setData] = useState([]);
+  const students = [];
+  let rank = 1;
 
-  useEffect(() => {
-    fetch('ranking.json',)
-      .then(response => response.json())
-      .then(data => setData(data))
-  }, [])
+  for (let i = 0; i < ranking.length; i++) {
+    if (i === 0) {
+      students.push({ ...ranking[i], rank });
+
+    } else {
+      if (ranking[i].cgpa === ranking[i - 1].cgpa) {
+        students.push({ ...ranking[i], rank });
+      } else {
+        rank = rank + 1;
+        students.push({ ...ranking[i], rank });
+      }
+    }
+  }
+
 
 
   return (
@@ -26,11 +37,12 @@ function App() {
           <td>Student ID</td>
           <td>CGPA</td>
         </tr>
-        {data?.length === 0 && <tr><td className='text-center font-xxl'>Loading...</td></tr>}
-        {data?.map((item, rank) => {
+
+        {students?.length === 0 && <tr><td className='text-center font-xxl'>Loading...</td></tr>}
+        {students?.map((item) => {
           return (
             <tr className='border text-lg' key={item.studentId}>
-              <td className='text-center'>{rank + 1}</td>
+              <td className='text-center'>{item.rank}</td>
               <td className='p-3'>{item.studentName}</td>
               <td className='p-3'>{item.campusName}</td>
               <td>{item.studentId}</td>
