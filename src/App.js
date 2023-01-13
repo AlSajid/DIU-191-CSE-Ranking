@@ -53,8 +53,8 @@ function App() {
           </tr>
 
           <tr className='font-bold text-xl '>
-            <td className="w-1">No</td>
-            <td className='p-3'>Rank</td>
+            <td className="w-1 text-xs">No</td>
+            <td className='py-1'>Rank</td>
             <td>Name</td>
             <td>Campus</td>
             <td>Student ID</td>
