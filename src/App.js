@@ -55,14 +55,14 @@ function App() {
           <tr className='font-bold text-xl '>
             {/* <td className="w-1 text-xs">No</td> */}
             <td className='py-1'>Rank</td>
-            <td>Name</td>
-            <td>Campus</td>
-            <td>Student ID</td>
-            <td>CGPA</td>
+            <td className='text-center'>Name</td>
+            <td className='text-center'>Campus</td>
+            <td className='text-center'>Student ID</td>
+            <td className='text-center'>CGPA</td>
           </tr>
 
 
-          {students?.length === 0 && <tr><td className='text-center font-xxl'>Loading...</td></tr>}
+          {students?.length === 0 && <tr><td className=' font-xxl'>Loading...</td></tr>}
 
           {students?.map((item, serial) => {
             return (
