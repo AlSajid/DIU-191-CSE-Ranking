@@ -67,7 +67,7 @@ function App() {
           {students?.map((item, serial) => {
             return (
               <tr className='border text-lg' key={item.studentId}>
-                <td className='text-center text-slate-500'>{serial + 1}</td>
+                <td className='text-center text-xs text-slate-500'>{serial + 1}</td>
                 <td className='text-center'>{item.rank}</td>
                 <td className='p-3'>{item.studentName}</td>
                 <td className='p-3'>{item.campusName}</td>
