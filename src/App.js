@@ -78,10 +78,10 @@ function App() {
 
           <tr className='font-bold text-xl '>
             <td className='py-1'>Rank</td>
-            <td className='text-center'>Name</td>
-            <td className='text-center'>Campus</td>
-            <td className='text-center'>Student ID</td>
-            <td className='text-center'>CGPA</td>
+            <td >Name</td>
+            <td >Campus</td>
+            <td >Student ID</td>
+            <td >CGPA</td>
           </tr>
 
 
