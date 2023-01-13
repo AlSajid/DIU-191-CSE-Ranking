@@ -29,6 +29,7 @@ function App() {
   }
 
   const handleSearch = (searchValue) => {
+    setCampus('all');
     const id = JsonQuery(`[*][*studentId~/${searchValue}/i]`,
       { data: students, allowRegexp: true }).value;
 
