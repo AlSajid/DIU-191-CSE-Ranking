@@ -31,7 +31,7 @@ function App() {
 
       <table className='table-auto w-11/12 mx-auto'>
         <tr className='font-bold text-xl '>
-          <td>Serial</td>
+          <td className="w-1">No</td>
           <td className='p-3'>Rank</td>
           <td>Name</td>
           <td>Campus</td>
