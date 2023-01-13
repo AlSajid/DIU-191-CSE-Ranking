@@ -46,7 +46,7 @@ function App() {
               <td className='p-3'>{item.studentName}</td>
               <td className='p-3'>{item.campusName}</td>
               <td>{item.studentId}</td>
-              <td>{item?.cgpa?.toFixed(2)}</td>
+              <td>{item?.cgpa}</td>
             </tr>
           );
         })}
