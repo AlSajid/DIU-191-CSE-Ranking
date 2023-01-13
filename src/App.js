@@ -31,6 +31,7 @@ function App() {
 
       <table className='table-auto w-11/12 mx-auto'>
         <tr className='font-bold text-xl '>
+          <td>Serial</td>
           <td className='p-3'>Rank</td>
           <td>Name</td>
           <td>Campus</td>
@@ -39,9 +40,10 @@ function App() {
         </tr>
 
         {students?.length === 0 && <tr><td className='text-center font-xxl'>Loading...</td></tr>}
-        {students?.map((item) => {
+        {students?.map((item, serial) => {
           return (
             <tr className='border text-lg' key={item.studentId}>
+              <td className='text-center text-slate-500'>{serial+1}</td>
               <td className='text-center'>{item.rank}</td>
               <td className='p-3'>{item.studentName}</td>
               <td className='p-3'>{item.campusName}</td>
